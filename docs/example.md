@@ -3,10 +3,10 @@
 This example illustrates how to run the tool.
 
 ## Download Model File
-Input is a file from the repo: 
-[wind_tower_2.json](https://github.com/xtoeffel/pynamo/master/exe/ut/wind_tower_2.json)
+The model is defined in this _JSON_ file: 
+[wind_tower_2.json](wind_tower_2.json)
 
-Download that file to a folder on your computer.
+Download that file (right-click &rarr; _Save As_) to a folder on your computer.
 We assume for this example `C:\temp\wind_tower_2.json` as location.
 
 ## Run Computation
