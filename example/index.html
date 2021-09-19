@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Christof Dittmar">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Example - pynamo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Example";
+    var mkdocs_page_input_path = "example.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> pynamo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../input/">Input</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Use</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../model/">Engineering Model</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Example</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#download-model-file">Download Model File</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-computation">Run Computation</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">pynamo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Use &raquo;</li>
+        
+      
+    
+    <li>Example</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="example">Example</h1>
+<p>This example illustrates how to run the tool.</p>
+<h2 id="download-model-file">Download Model File</h2>
+<p>Input is a file from the repo: 
+<a href="https://github.com/xtoeffel/pynamo/master/exe/ut/wind_tower_2.json">wind_tower_2.json</a></p>
+<p>Download that file to a folder on your computer.
+We assume for this example <code>C:\temp\wind_tower_2.json</code> as location.</p>
+<h2 id="run-computation">Run Computation</h2>
+<p>The output will be written to <code>C:\temp\wind_tower_2_out.xlsx</code>.</p>
+<p>If you run the <em>Windows</em> executable call:</p>
+<pre><code class="language-bash">pynamo.exe C:\temp\wind_tower_2.json C:\temp\wind_tower_2_out.xlsx
+</code></pre>
+<p>If you run over the <em>Python</em> interpreter call:</p>
+<pre><code class="language-bash">python pynamo.py C:\temp\wind_tower_2.json C:\temp\wind_tower_2_out.xlsx
+</code></pre>
+<p>The output looks similar to this:</p>
+<pre><code class="language-code">JSON input: C:\temp\wind_tower_2.json
+Excel output: C:\temp\wind_tower_2_out.xlsx
+Executing:
+   Verifying Files
+   Reading &quot;C:\temp\wind_tower_2.json&quot;
+   Computing frequencies and mode shapes
+   Writing &quot;C:\temp\wind_tower_2_out.xlsx&quot;
+Done!
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Output might deviate depending on the tool version.</p>
+</blockquote>
+<p><em>That's it!</em>
+Open the output file and review the results.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../model/" class="btn btn-neutral" title="Engineering Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

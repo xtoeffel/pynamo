@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Christof Dittmar">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Engineering Model - pynamo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Engineering Model";
+    var mkdocs_page_input_path = "model.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> pynamo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../input/">Input</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Use</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Engineering Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#units">Units</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#coordinate-systems">Coordinate Systems</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#beam-types">Beam Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mass-elements">Mass Elements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#springs">Springs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../example/">Example</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">pynamo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Use &raquo;</li>
+        
+      
+    
+    <li>Engineering Model</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="model">Model</h1>
+<p>A simple FE-Model is used for the computation.
+The model consists of multiple beams. 
+Beams are connected by nodes.</p>
+<p><img alt="system" src="../system.png" /></p>
+<p>A single beam is defined by:</p>
+<ul>
+<li>start, end node</li>
+<li>length</li>
+<li>area, <em>A</em></li>
+<li>elastic modulus, <em>E</em></li>
+<li>area moment of inertia, <em>I</em></li>
+<li>mass, <em>m</em></li>
+</ul>
+<p><img alt="beam" src="../beam.png" /></p>
+<h2 id="units">Units</h2>
+<p>The tool works unit independent. That means all values must 
+be provided in compatible units - for instance: </p>
+<ul>
+<li>if length is in <em>m</em> then <em>A</em> must be in <em>m<sup>2</sub></em></li>
+<li>if mass is in <em>kg</em> and length in <em>m</em>, then gravity must be in 
+  <em>m/s<sup>2</sub></em> and forces in <em>N</em>.</li>
+</ul>
+<h2 id="coordinate-systems">Coordinate Systems</h2>
+<p>The overall coordinate system (CSYS) is shown below. The beam axis is <em>x</em>.</p>
+<p><img alt="System CSYS" src="../system_csys.png" /></p>
+<p>Nodes have their own CSYS according to the below figure.</p>
+<p><img alt="Node CSYS" src="../node_csys.png" /></p>
+<p>Both systems overlay:</p>
+<ul>
+<li><em>x</em> = <em>u</em></li>
+<li><em>z</em> = <em>w</em></li>
+<li>rotation around <em>y</em> = <em>phi</em></li>
+</ul>
+<h2 id="beam-types">Beam Types</h2>
+<p>Available beam types are:</p>
+<ul>
+<li>
+<p><code>B_2DOF</code></p>
+<ul>
+<li>Bernoulli beam </li>
+<li>start and end node with 2 DOF: <em>w</em>, <em>phi</em></li>
+</ul>
+</li>
+<li>
+<p><code>B_2DOF_II</code> </p>
+<ul>
+<li>Bernoulli beam </li>
+<li>start and end node with 2 DOF: <em>w</em>, <em>phi</em> </li>
+<li>support of <em>pDelta</em> effects</li>
+</ul>
+</li>
+</ul>
+<p>Best option is to use <code>B_2DOF_II</code> for all computations as allows
+to toggle the <em>pDelta</em> effect on and off without modification of the
+model definition.</p>
+<blockquote>
+<p><strong>Note:</strong> Beam types cannot be mixed within a model.</p>
+</blockquote>
+<h2 id="mass-elements">Mass Elements</h2>
+<p>Masses are defined by:</p>
+<ul>
+<li>coordinate on the x-axis: <code>"x"</code></li>
+<li>mass value: <code>"mass"</code></li>
+<li>mass moment of inertia: <code>"mmoi"</code></li>
+</ul>
+<p>Masses are assigned to the node closest to the specified <em>x</em>-coordinate.
+It is allowed to define multiple masses at the same location <em>x</em>; 
+their effect will be combined.</p>
+<h2 id="springs">Springs</h2>
+<p>Springs are defined by:</p>
+<ul>
+<li>coordinate on the x-axis: <code>"x"</code></li>
+<li>translational spring value: <code>"w"</code></li>
+<li>rotational spring value: <code>"phi"</code></li>
+</ul>
+<p>Springs must be defined at exact node locations.</p>
+<h2 id="boundary-conditions">Boundary Conditions</h2>
+<p>Boundary conditions are defined by:</p>
+<ul>
+<li>coordinate on the x-axis: <code>"x"</code></li>
+<li>value for: <code>"w": 0.0</code>, <code>"phi": 0.0</code></li>
+</ul>
+<p>Boundary conditions must be defined at exact node locations. Values must
+be set to <code>0.0</code>, otherwise the BC will not be applied correctly.</p>
+<blockquote>
+<p><strong>Note</strong>: It is allowed to define springs and BC for 
+the same node (<code>x</code>-location). However, the BC will 
+always override the spring.</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../example/" class="btn btn-neutral float-right" title="Example">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../input/" class="btn btn-neutral" title="Input"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../input/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../example/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
