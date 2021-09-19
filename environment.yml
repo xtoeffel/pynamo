@@ -1,0 +1,16 @@
+name: pynamo
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pre-commit
+  - numpy
+  - pandas
+  - pytest
+  - openpyxl
+  - xlsxwriter
+  - mypy
+  - flake8
+  - black
+  - rope
+  - ipython

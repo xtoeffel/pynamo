@@ -1,0 +1,92 @@
+{
+    "parameters": {
+        "p_delta": false,
+        "prefer_positive_lateral_mode_shape_values": false,
+        "number_of_modes": 3,
+        "normalize_mode_shapes": true,
+        "gravity": 9.81
+    },
+    "model": {
+        "beam_type": "B_2DOF_II",
+        "dofs": [
+            {
+                "x": 0.0,
+                "DOF.W": 0.0,
+                "DOF.PHI": 0.0
+            }
+        ],
+        "masses": [
+            {
+                "x": 0.0,
+                "mass":  1.0e6,
+                "phi": 5.0e7
+            },
+            {
+                "x": 104.16,
+                "mass":  165000,
+                "phi": 5.0e5
+            },
+            {
+                "x": 42.248,
+                "mass": 20000,
+                "phi": 0
+            },
+            {
+                "x": 88.116,
+                "mass": 12342,
+                "phi": 0
+            },
+            {
+                "x": 88.116,
+                "mass": 23484,
+                "phi": 0
+            }
+        ],
+        "beams": [
+            {"length":0.219, "area":0.0, "mass":16813, "area_moi":6.41081129824498, "e_modul":2.1e11},
+            {"length":2.8, "area":0.0, "mass":22911.6, "area_moi":6.43824064894987, "e_modul":2.1e11},
+            {"length":2.768, "area":0.0, "mass":20090.8, "area_moi":6.27949200900233, "e_modul":2.1e11},
+            {"length":2.887, "area":0.0, "mass":17598.4, "area_moi":4.7495310322327, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":25932.2, "area_moi":4.60318693880256, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":20996.6, "area_moi":4.44353883687877, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":23181.3, "area_moi":4.21737069248674, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":15405.7, "area_moi":4.11093862453754, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":15026.8, "area_moi":4.00450655658835, "e_modul":2.1e11},
+            {"length":2.938, "area":0.0, "mass":16155.8, "area_moi":3.91137849713281, "e_modul":2.1e11},
+            {"length":2.94, "area":0.0, "mass":18433.2, "area_moi":3.83155444617091, "e_modul":2.1e11},
+            {"length":0.158, "area":0.0, "mass":5384.3, "area_moi":3.83155444617091, "e_modul":2.1e11},
+            {"length":0.158, "area":0.0, "mass":7792, "area_moi":3.83155444617091, "e_modul":2.1e11},
+            {"length":2.04, "area":0.0, "mass":10305.3, "area_moi":3.80994999224835, "e_modul":2.1e11},
+            {"length":2.2, "area":0.0, "mass":11721.3, "area_moi":3.66072587706948, "e_modul":2.1e11},
+            {"length":2.75, "area":0.0, "mass":13016.9, "area_moi":3.55893098327682, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":12965.3, "area_moi":3.45270538334738, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":12656.7, "area_moi":3.33521146083033, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":12350.5, "area_moi":3.22030732614966, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":12047, "area_moi":3.10795756943252, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":11722.6, "area_moi":2.99812701300219, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":11400.8, "area_moi":2.87907714574455, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":11105.3, "area_moi":2.77437203411986, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":12745.6, "area_moi":2.67207987923229, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":13149.6, "area_moi":2.57216644379846, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":10188.3, "area_moi":2.46364817528523, "e_modul":2.1e11},
+            {"length":2.85, "area":0.0, "mass":7231.1, "area_moi":2.3685736990517, "e_modul":2.1e11},
+            {"length":0.142, "area":0.0, "mass":4417.1, "area_moi":2.34858021276271, "e_modul":2.1e11},
+            {"length":0.142, "area":0.0, "mass":6811.1, "area_moi":2.34858021276271, "e_modul":2.1e11},
+            {"length":2.62, "area":0.0, "mass":8977.1, "area_moi":2.34602518270297, "e_modul":2.1e11},
+            {"length":2.514, "area":0.0, "mass":9454.4, "area_moi":2.32216771543341, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":9994.2, "area_moi":2.29021127898249, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":9639.8, "area_moi":2.21564626059701, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":10673.5, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":10548.1, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":9450.8, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":2.96, "area":0.0, "mass":9775.9, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":2.832, "area":0.0, "mass":21359.7, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":2.932, "area":0.0, "mass":19671.8, "area_moi":2.1304290967279, "e_modul":2.1e11},
+            {"length":1.82, "area":0.0, "mass":9369.3, "area_moi":2.84412284413174, "e_modul":2.1e11},
+            {"length":2.26, "area":0.0, "mass":10515.4, "area_moi":2.43658612022546, "e_modul":2.1e11},
+            {"length":2.26, "area":0.0, "mass":9760.8, "area_moi":2.3489011374713, "e_modul":2.1e11},
+            {"length":0.8, "area":0.0, "mass":5265.1, "area_moi":2.53947311268589, "e_modul":2.1e11},
+            {"length":0.18, "area":0.0, "mass":2252.3, "area_moi":2.34271467141357, "e_modul":2.1e11}
+        ]
+    }
+}

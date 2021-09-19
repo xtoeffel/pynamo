@@ -1,0 +1,63 @@
+{
+    "header": {
+        "designator": "dlubal example",
+        "project": "unit test",
+        "version": "0",
+        "user": "christof dittmar",
+        "description": "unit test for pDelta effects (2nd order)",
+        "note": "from article of dlubal software"
+    },
+    "parameters": {
+        "p_delta": true,
+        "prefer_positive_lateral_mode_shape_values": false,
+        "number_of_modes": 5,
+        "normalize_mode_shapes": true,
+        "gravity": 9.81
+    },
+    "model": {
+        "beam_type": "B_2DOF_II",
+        "dofs": [
+            {
+                "x": 0.0,
+                "w": 0.0,
+                "phi": 0.0
+            }
+        ],
+        "springs": [
+            {
+                "x": 0.0,
+                "w": 1.2e6,
+                "phi": 5.0e7
+            }
+        ],
+        "masses": [
+            {
+                "x": 1.0,
+                "mass": 4000.0
+            },
+            {
+                "x": 2.0,
+                "mass": 4000.0
+            },
+            {
+                "x": 3.0,
+                "mass": 4000.0
+            },
+            {
+                "x": 4.0,
+                "mass": 4000.0
+            },
+            {
+                "x": 5.0,
+                "mass": 4000.0
+            }
+        ],
+        "beams": [
+              {"length":1.0, "area":0.0, "area_moi":8.356e-5, "mass":2.5, "e_modul": 210000000000},
+              {"length":1.0, "area":0.0, "area_moi":8.356e-5, "mass":2.5, "e_modul": 210000000000},
+              {"length":1.0, "area":0.0, "area_moi":8.356e-5, "mass":2.5, "e_modul": 210000000000},
+              {"length":1.0, "area":0.0, "area_moi":8.356e-5, "mass":2.5, "e_modul": 210000000000},
+              {"length":1.0, "area":0.0, "area_moi":8.356e-5, "mass":2.5, "e_modul": 210000000000}
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+site_name: pynamo
+site_author: Christof Dittmar
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Input: input.md
+  - Use:
+    - Engineering Model: model.md
+    - Example: example.md
+
+theme: readthedocs
